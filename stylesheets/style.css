@@ -1,0 +1,50 @@
+#header {
+  text-align: center;
+}
+
+* {
+  background-color: #ff3366;
+}
+
+p {
+  font-size: 2em;
+  font-family: Arial;
+  color: #00DEF2;
+  text-align: center;
+  padding-top: 20%
+}
+
+a {
+  color: #00DEF2;
+}
+
+#logo {
+  position: center;
+  padding-top: 13%;
+  width: 75%;
+  padding-bottom: 2%;
+}
+
+#textBox {
+  margin-left: 25%;
+  margin-right: auto;
+  width: 50%;
+  height: 125px;
+  background-color: white;
+}
+
+#analyze {
+  font-size: 1em;
+  margin-top: 1%;
+  max-width: 12%;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url(../images/preclickButton.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#hisDeal {
+  font-family:
+}
