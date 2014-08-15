@@ -1,0 +1,44 @@
+Object Type:
+  Input (ChatText)
+Events:
+  dblclick: userFeedback(“slow down honey”);
+Methods:
+  displayInput();
+  checkIfEmpty(): userFeedback(“I got nothin'”);
+Properties:
+  empty:(true/false)
+  sInput;
+
+Object Type:
+  Generator
+Events:
+Methods:
+  setText();
+  setImage();  // may be implemented later
+Properties:
+  valueText;
+  valueImageURL;
+
+Object Type:
+  ResultDisplay
+Events:
+  listen for user input to continue
+  interstitial vamping (“start Vamping”)
+Methods:
+  verifyResponse()
+  setVampTime()
+  selectfromArray()
+Properties:
+  animationURL, or progress URL
+  vampTime
+  imageURL
+
+Object Type:
+  HisDeal
+Events:
+  listening for end of progress bar or submit
+  (end of animation or
+Methods:
+  setTextReply()
+Properties:
+  stringTextReply;
