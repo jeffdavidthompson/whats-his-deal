@@ -27,15 +27,14 @@ var hisDealsList = [
   "He saw 'Fight Club' for the first time last night.",
   "He's ashamed of his love of musical theater.",
   "He spent all his money buying up Twinkies when Hostess filed for bankruptcy.",
-  "He's not into gaming as much as you and that intimidates him.",
+  "He's not into gaming as much as you are and that intimidates him.",
   "He is immune to social pressure.",
   "Male privilege. What else?",
   "He's doesn't really understand CSS.",
   "Someone caught a pic of him sleeping during class and he's kinda embarassed about it.",
   "He has an unhealthy relationship with his phone",
-  "His thinks his therapist is about to fire him.",
+  "He thinks his therapist is about to fire him.",
   "He thinks you're trying to sell him Amway.",
-  "You're a strong, independent woman. You're better than this.",
   "His pants shrunk in the wash.",
   "He didn't get your last text."
   ];
@@ -43,10 +42,12 @@ var hisDealsList = [
 //List of possible output messages if no input entered
 
 var hisDealsEmpty = [
-  "He must be a ghost. Deal with it.",
-  "You didn't enter anything and that's your problem.",
-  "I didn't catch that. Try again.",
-  "If you need validation, you won't get it here. Try again."
+  "Error: You didn't enter anything so he must be a ghost. Deal with it.",
+  "Error: You didn't enter anything and that's your problem.",
+  "Error: I didn't catch that. Try entering something.",
+  "Error: If you need validation, you won't get it here. Try entering something.",
+  "Error: This would work a lot better if you actually entered something.",
+  "Error: If you could enter something, that would be great."
   ];
 
 //Function for when user clicks "submit"
