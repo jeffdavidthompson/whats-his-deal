@@ -20,3 +20,6 @@ Analysis of the Results
   ...
 
 UML diagram is located in 'docs/20140814 UML Model.odg'
+
+Resources
+Banner created at: http://banner.fotor.com/
