@@ -21,6 +21,8 @@ a {
 h1 {
   font-family: Arial;
   color: white;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 #logo {
