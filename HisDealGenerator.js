@@ -7,6 +7,7 @@ var elhisDeal = document.getElementById("hisDeal");
 
 //Set up individiual Event Listeners
 elanalyze.addEventListener("click", runSubmit, false);
+elanalyze.addEventListener("click", hideButton, false);
 
 
 //List of possible output messages for what his deal is
@@ -64,3 +65,6 @@ function runSubmit() {
   }
 };
 
+function hideButton() {
+  elanalyze.style.visibility = "hidden";
+}
