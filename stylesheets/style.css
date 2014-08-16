@@ -18,6 +18,11 @@ a {
   color: #00DEF2;
 }
 
+h1 {
+  font-family: Arial;
+  color: white;
+}
+
 #logo {
   position: center;
   padding-top: 13%;
@@ -46,5 +51,6 @@ a {
 }
 
 #hisDeal {
-  font-family:
+  font-family: Arial;
+  color: white;
 }

@@ -2,7 +2,7 @@
 
 //getElementByID for all the elements to be updated
 var elanalyze = document.getElementById("analyze");
-var eltextbox = document.getElementById("textbox");
+var eltextbox = document.getElementById("textBox");
 var elhisDeal = document.getElementById("hisDeal");
 
 //Set up individiual Event Listeners
@@ -55,12 +55,11 @@ var hisDealsEmpty = [
 //If user does not enter any information, it selects a random phrase from hisDealsEmpty array.
 
 function runSubmit() {
-  var hisDealResult = hisDealsList[Math.floor(Math.random()*hisDealsList.length)];
-  var hisDealEmpty = hisDealsEmpty[Math.floor(Math.random()*hisDealsEmpty.length)];
+  var hisDealResult = hisDealsList[Math.floor(Math.random() * hisDealsList.length)];
+  var hisDealEmpty = hisDealsEmpty[Math.floor(Math.random() * hisDealsEmpty.length)];
   if (eltextbox.textContent != "") {
     elhisDeal.textContent = hisDealResult;
-  }
-  else {
+  } else {
     elhisDeal.textContent = hisDealEmpty;
   }
 };

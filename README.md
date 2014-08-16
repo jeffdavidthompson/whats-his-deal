@@ -20,7 +20,7 @@ A web app based off of Mindy Kaling's talk at Made With Code.
 ###Analysis of the Results
   ...
 
-###UML diagram is located in 'docs/20140814 UML Model.odg'
+*Note: UML diagram is located in 'docs/20140814 UML Model.odg'*
 
 ###Resources
 Color scheme inspired by [this](http://www.colourlovers.com/palette/2898062/Pinkie_Pie) palette.
