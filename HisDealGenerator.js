@@ -31,12 +31,14 @@ var hisDealsList = [
   "He's not into gaming as much as you are and that intimidates him.",
   "He is immune to social pressure.",
   "Male privilege. What else?",
-  "He's doesn't really understand CSS.",
+  "He doesn't really understand CSS.",
   "Someone caught a pic of him sleeping during class and he's kinda embarassed about it.",
-  "He has an unhealthy relationship with his phone",
+  "He has an unhealthy relationship with his phone.",
   "He thinks his therapist is about to fire him.",
   "He thinks you're trying to sell him Amway.",
+  "He's just a business major.",
   "His pants shrunk in the wash.",
+  "He's just not that into you. :(",
   "He didn't get your last text."
   ];
 
