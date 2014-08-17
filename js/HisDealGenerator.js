@@ -80,7 +80,7 @@ var button = {
 
 //Object for user's text entry
 var input = {
-  isEmpty: false,
+  isEmpty: true,
 
   //Clears default message in text box when user clicks on it
   clearText: function(onclick) {
