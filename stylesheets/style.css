@@ -32,12 +32,26 @@ h1 {
   padding-bottom: 2%;
 }
 
-#textBox {
+.inputBox {
   margin-left: 25%;
   margin-right: auto;
   width: 50%;
   height: 125px;
   background-color: white;
+}
+
+#textBox {
+  /*
+  margin-left: 25%;
+  margin-right: auto;
+  width: 50%;
+  height: 125px;
+  background-color: white;
+  */
+}
+
+#imgBox {
+  visibility: hidden;
 }
 
 #analyze {
