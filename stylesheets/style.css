@@ -51,6 +51,8 @@ h1 {
 }
 
 #imgBox {
+  max-height: 125px;
+  height: auto;
   visibility: hidden;
 }
 

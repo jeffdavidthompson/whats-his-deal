@@ -14,20 +14,46 @@
 //  using the deprecated HTML event handlers
 //
 // In order to support Drag from another source to the web
-//  page, the DOM must be modified to overwrite the dest text
-//  box with an "img" element.
+//  page, a hidden IMG is used that is mutually exclusive in visibility
+//  with the original textinput box.
+//
 //
 function allowDrop(ev) {
   // normally, the default action a web page takes for a drag
-  //  made onto it is to add the item dropped. This function
-  //  call turns off that default behavior.
+  //  made onto it is to open the item dropped in a new page.
+  //  This function call turns off that default behavior.
   ev.preventDefault();
 }
 
 function drag(ev) {
   // the data being dragged
-  // We use "text"
+  // We use "Text"
   ev.dataTransfer.setData("Text", ev.target.id);
+}
+
+function setElementView(elSwitch, bVisible) {
+  if (bVisible) {
+    elSwitch.style.visibility = "visible";
+    elSwitch.style.display = "block";
+    elSwitch.setAttribute("visibility", "visible");
+    elSwitch.setAttribute("display", "block");
+  } else {
+    elSwitch.style.visibility = "hidden";
+    elSwitch.style.display = "none";
+    elSwitch.setAttribute("visibility", "hidden");
+    elSwitch.setAttribute("display", "none");
+  }
+}
+
+function swapMutexElements(elOld) {
+  if (elOld.hasAttribute("mutexid")) {
+    var elNew = document.getElementById(elOld.getAttribute("mutexid"));
+    setElementView(elOld, false);
+    setElementView(elNew, true);
+    return elNew;
+  } else {
+    return elOld;
+  }
 }
 
 function drop(ev) {
@@ -38,12 +64,12 @@ function drop(ev) {
   var objPasted = ev.dataTransfer;
   var elTarget = ev.target;
 
-  if(objPasted.files.length > 0) {
+  if (objPasted.files.length > 0) {
     // just take the first file
     var firstFile = objPasted.files[0];
 
     // only allow image files
-    if(! firstFile.type.match("image.*")) {
+    if (! firstFile.type.match("image.*")) {
       return;
     }
 
@@ -55,6 +81,12 @@ function drop(ev) {
     // The code that does this is derived from:
     // http://www.html5rocks.com/en/tutorials/file/dndfiles/
     // by Eric Bidelman
+    //
+    // The Bidelman example was for a filereader to generate thumbnails of
+    //  multiple images, instead of what it is being used for here to safely
+    //  load and display an image, and then swap it with a text box that has
+    //  been marked as "mutex", or mutually exclusive [visibility] with another
+    //  id.
 
     // check if the FileReader API is supported
     if(! window.FileReader) {
@@ -65,18 +97,10 @@ function drop(ev) {
 
     reader.onload = (function(elTarget) {
       return function(ev) {
-        if( elTarget.hasAttribute("mutexid")) {
-          var elVisible = document.getElementById(elTarget.getAttribute("mutexid"));
+        var elNew = swapMutexElements(elTarget);
 
-          elVisible.src = ev.target.result; // file contents are on new "ev"
-          elVisible.setAttribute("visibility", "visible");
-          elVisible.setAttribute("display", "block");
-          elVisible.style.display = "block";
-
-          elTarget.setAttribute("visibility","hidden");
-          elTarget.setAttribute("display", "none");
-          elTarget.style.display = "none";
-        }
+        // should verify newEl is an image before assigning "src"
+        elNew.src = ev.target.result; // file contents are on new "ev"
       };
     })(elTarget);
 
@@ -89,26 +113,21 @@ function drop(ev) {
   }
 }
 
+function addDragListenersToId(idListening) {
+  var elListening = document.getElementById(idListening);
+
+  if (elListening.addEventListener) {
+    elListening.addEventListener('dragover', allowDrop, false);
+    elListening.addEventListener('drop', drop, false);
+    elListening.addEventListener('dragstart', drag, false);
+  }
+}
 
 //
 //  IIFE code to set up the page's event listeners
 //
 (function() {
-  var elTextBox = document.getElementById("textBox");
-
-  if(elTextBox.addEventListener) {
-    elTextBox.addEventListener('dragover', allowDrop, false);
-    elTextBox.addEventListener('drop', drop, false);
-    elTextBox.addEventListener('dragstart', drag, false);
-    }
-
-  var elImgBox = document.getElementById("imgBox");
-  if(elImgBox.addEventListener) {
-    elImgBox.addEventListener('dragover', allowDrop, false);
-    elImgBox.addEventListener('drop', drop, false);
-    elImgBox.addEventListener('dragstart', drag, false);
-  }
-
-
+  addDragListenersToId("textBox");
+  addDragListenersToId("imgBox");
 }());
 
