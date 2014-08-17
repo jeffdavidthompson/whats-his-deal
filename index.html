@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <meta charset="utf-8">
     <link rel='stylesheet' href='stylesheets/base.css'>
     <link rel='stylesheet' href='stylesheets/skeleton.css'>
     <link rel='stylesheet' href='stylesheets/state.css'>
@@ -15,7 +16,8 @@
       </section>
     </header>
     <body>
-      <textarea id="textBox">Paste a chat log or email from the male in question into here for analysis. (It doesn't have to be pretty. Our engine is that smart.)</textarea>
+      <textarea id="textBox" class="inputBox" mutexid="imgBox">Paste a chat log or email from the male in question into here for analysis. (It doesn't have to be pretty. Our engine is that smart.)</textarea>
+      <img id="imgBox" class="inputBox" mutexid="textBox">
       <div id="analyze"></div>
       <h1 id="hisDeal">&nbsp;</h1>
       <p>
@@ -26,4 +28,6 @@
     </body>
   </body>
   <script type="text/javascript" src="HisDealGenerator.js"></script>
+  <!--- Event listeners on the DOM must go at the end -->
+  <script type="text/javascript" src="js/events.js"></script>
 </html>
