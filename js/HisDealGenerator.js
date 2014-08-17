@@ -1,6 +1,7 @@
 //getElementByID for all the elements to be updated
 var elanalyze = document.getElementById("analyze");
 var eltextbox = document.getElementById("textBox");
+var elImage = document.getElementById("imgBox");
 var elhisDeal = document.getElementById("hisDeal");
 
 //List of possible output messages for what his deal is
@@ -90,7 +91,7 @@ var input = {
   //Checks if text box is empty. If yes, displays randomly selected error message
   //if not empty, displays a random selection from a list of hisDeals
   runSubmit: function() {
-    if (input.isEmpty) {
+    if (input.isEmpty && (elImage.src.length == 0)) {
       elhisDeal.textContent = hisDealEmpty;
     } else {
       elhisDeal.textContent = hisDealResult;
