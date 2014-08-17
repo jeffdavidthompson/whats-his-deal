@@ -80,13 +80,7 @@ var button = {
 
 //Object for user's text entry
 var input = {
-  isEmpty: false,
-
-  //Clears default message in text box when user clicks on it
-  clearText: function(onclick) {
-    eltextbox.textContent = "";
-    input.isEmpty = true;
-  },
+  isEmpty: true,
 
   //Changes isEmpty vcalue to false. Assumes user is not typing spaces.
   userType: function(onkeypress) {
@@ -105,7 +99,6 @@ var input = {
 }
 
 //Set up individiual Event Listeners
-eltextbox.addEventListener("click", input.clearText, false);
 eltextbox.addEventListener("keypress", input.userType, false);
 elanalyze.addEventListener("click", input.runSubmit, false);
 elanalyze.addEventListener("click", button.hide, false);
