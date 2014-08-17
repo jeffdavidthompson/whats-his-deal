@@ -23,6 +23,7 @@ function allowDrop(ev) {
   //  made onto it is to open the item dropped in a new page.
   //  This function call turns off that default behavior.
   ev.preventDefault();
+  ev.stopPropagation();
 }
 
 function drag(ev) {
@@ -61,6 +62,7 @@ function drop(ev) {
   //  made onto it is to add the item dropped. This function
   //  call turns off that default behavior.
   ev.preventDefault();
+  ev.stopPropagation();
   var objPasted = ev.dataTransfer;
   var elTarget = ev.target;
 
