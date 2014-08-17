@@ -25,3 +25,5 @@ A web app based off of Mindy Kaling's talk at Made With Code.
 ###Resources
 Color scheme inspired by [this](http://www.colourlovers.com/palette/2898062/Pinkie_Pie) palette.
 App idea is of course courtesy of Mindy Kaling.
+
+Pic of Mindy is from NY Mag.

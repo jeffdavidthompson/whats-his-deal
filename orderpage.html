@@ -9,22 +9,33 @@
   <head>
     <title>Complete your order - What's His Deal?</title>
   </head>
-  <body>
-    <p>
+  <body id="indexBackground">
+    <p id="aboutHeader">
       To continue using WHD, please complete the order form below!
     </p>
-    <fieldset>
-      <legend>What's your deal?</legend>
-      <label>
-        Name:
-        <input type="text" name="name" id="name"/>
-      </label>
-      <label type="">
-        Age:
-        <input type=""
-      </label>
+    <fieldset id="orderField">
+      <h2 class="buyerInfo">What's your deal?</h2>
+      <div class="buyerInfo">
+        <label>
+          Name:
+          <input type="text" name="name" id="name"/>
+        </label>
+      </div>
+      <div class="buyerInfo">
+        <label>
+          Age:
+          <input type="text" name="age" id="age" />
+        </label>
+      </div>
+      <div class="buyerInfo">
+        Gender:
+        <input type="radio" name="gender" id="female" value="f">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="male" value="m">
+        <label for="male">Male</label>
+      </div>
     </fieldset>
-      <div id="buybutton"><img src= "http://cdn2.bigcommerce.com/n-arxsrf/iuqk850/product_images/uploaded_images/btnbuynow.jpg?t=1403032575"/></div>
+      <div id="buybutton"><img src= "images/buybutton.png"/></div>
 
       <h1 id="orderthanks">&nbsp;</h1>
 
