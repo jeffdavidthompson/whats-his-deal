@@ -27,3 +27,16 @@ Color scheme inspired by [this](http://www.colourlovers.com/palette/2898062/Pink
 App idea is of course courtesy of Mindy Kaling.
 
 Pic of Mindy is from NY Mag.
+
+#The code for Drag and Drop of images is derived from source code at:
+    http://www.w3schools.com/html/html5_draganddrop.asp
+
+ The w3schools code only provided for dragging an image from
+  one part of a page to another part of the same page, and did so
+  using the deprecated HTML event handlers
+
+#The code that reads an image into the web page is derived from source code at:
+    http://www.html5rocks.com/en/tutorials/file/dndfiles/
+      by Eric Bidelman
+
+
