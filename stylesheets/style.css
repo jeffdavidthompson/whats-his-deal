@@ -10,7 +10,6 @@ p {
   font-size: 2em;
   font-family: Arial;
   color: white;
-  text-align: center;
 }
 
 a {
@@ -22,44 +21,17 @@ h1 {
   color: white;
   font-size: 2em;
   font-weight: bold;
-  text-align: center;
-}
-
-#logo {
-  position: center;
-  padding-top: 10%;
-  width: 75%;
-  padding-bottom: 2%;
 }
 
 .inputBox {
-  margin-left: 25%;
-  margin-right: auto;
-  width: 50%;
-  height: 125px;
   background-color: white;
-}
-
-#textBox {
-  /*
-  margin-left: 25%;
-  margin-right: auto;
-  width: 50%;
-  height: 125px;
-  background-color: white;
-  */
 }
 
 #imgBox {
-  max-height: 125px;
-  height: auto;
   visibility: hidden;
 }
 
 #analyze {
-  max-width: 12%;
-  height: 100px;
-  margin: 0 auto;
   background-image: url(../images/preclickButton.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -68,53 +40,30 @@ h1 {
 #hisDeal {
   font-family: Arial;
   color: white;
-  padding-bottom: 3%;
 }
 
 #about {
   background-image: url(../images/queenMindy.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
   background-attachment: fixed;
 }
 
 .whiteBox {
   background-color: rgba(250, 250, 250, .25);
-  padding: 15px;
-  width: 25%;
-  margin-left: 3%;
-  margin-top: 10%;
 }
 
 .aboutText {
   font-size: 1em;
-  padding-top: 2%;
-  text-align: left;
 }
 
 h2 {
   color: white;
   font-size: 1.5em;
-  padding-top: 2%;
   font-family: Arial;
 }
 
 #orderField {
-  padding-left: 7%;
-  padding-top: 2%;
   font-family: Arial;
   color: white;
-}
-
-.buyerInfo {
-  padding: .5%;
-}
-
-#aboutHeader {
-  padding: .5%;
-}
-
-#buybutton {
-  padding-left: 6%;
 }
