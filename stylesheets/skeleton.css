@@ -240,3 +240,78 @@
       width: 0;
       height: 0;
     }
+
+p {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#logo {
+  position: center;
+  padding-top: 10%;
+  width: 75%;
+  padding-bottom: 2%;
+}
+
+.inputBox {
+  margin-left: 25%;
+  margin-right: auto;
+  width: 50%;
+  height: 125px;
+}
+
+#imgBox {
+  max-height: 125px;
+  height: auto;
+}
+
+#analyze {
+  max-width: 12%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#hisDeal {
+  padding-bottom: 3%;
+}
+
+#about {
+  background-position: center top;
+}
+
+.whiteBox {
+  padding: 15px;
+  width: 25%;
+  margin-left: 3%;
+  margin-top: 10%;
+}
+
+.aboutText {
+  padding-top: 2%;
+  text-align: left;
+}
+
+h2 {
+  padding-top: 2%;
+}
+
+#orderField {
+  padding-left: 7%;
+  padding-top: 2%;
+}
+
+.buyerInfo {
+  padding: .5%;
+}
+
+#aboutHeader {
+  padding: .5%;
+}
+
+#buybutton {
+  padding-left: 6%;
+}
+
