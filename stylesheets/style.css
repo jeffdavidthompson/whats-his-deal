@@ -24,6 +24,14 @@ h1 {
 }
 
 .inputBox {
+  height: 10em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#textBox {
+  margin-left: 25%;
+  width: 50%;
   background-color: white;
 }
 
@@ -32,6 +40,9 @@ h1 {
 }
 
 #analyze {
+  max-width: 12%;
+  height: 4em;
+  margin: 0 auto;
   background-image: url(../images/preclickButton.png);
   background-size: contain;
   background-repeat: no-repeat;
