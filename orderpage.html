@@ -14,30 +14,60 @@
       To continue using WHD, please complete the order form below!
     </p>
     <fieldset id="orderField">
-      <h2 class="buyerInfo">What's your deal?</h2>
-      <div class="buyerInfo">
-        <label>
-          Name:
-          <input type="text" name="name" id="name"/>
-        </label>
-      </div>
-      <div class="buyerInfo">
-        <label>
-          Age:
-          <input type="text" name="age" id="age" />
-        </label>
-      </div>
-      <div class="buyerInfo">
-        Gender:
-        <input type="radio" name="gender" id="female" value="f">
-        <label for="female">Female</label>
-        <input type="radio" name="gender" id="male" value="m">
-        <label for="male">Male</label>
-      </div>
+      <h2>What's your deal?</h2>
+      <fieldset>
+        <legend>Contact</legend>
+        <div class="buyerInfo">
+          <label>
+            Name:
+            <input type="text" name="name" id="name" required="required"/>
+          </label>
+        </div>
+        <div class="buyerInfo">
+          <label>
+            Email:
+            <input type="email" name="email" id="email" />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Payment Info</legend>
+        <div class="buyerInfo">
+          <label>
+            Mindy#
+            <input type="text" name="mindynumber" id="mindynumber" />
+          </label>
+        </div>
+        <div class="buyerInfo">
+          <label>
+            Expiration
+            <input type="date" name="mindydate" id="mindydate" />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Demographic Info</legend>
+        <div class="buyerInfo">
+          <label>
+            Age:
+            <input type="number" min="18" max="130" name="age" id="age" />
+          </label>
+        </div>
+        <div class="buyerInfo">
+          Gender:
+          <input type="radio" name="gender" id="female" value="f">
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="male" value="m">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="other" value="o">
+          <label for="other">Other</label>
+        </div>
+      </fieldset>
     </fieldset>
-      <div id="buybutton"><img src= "images/buybutton.png"/></div>
 
       <h1 id="orderthanks">&nbsp;</h1>
+      <div id="buybutton"><img src= "images/buybutton.png"/></div>
+
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/orderpage.js"></script>
   </body>

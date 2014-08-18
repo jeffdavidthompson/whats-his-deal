@@ -5,21 +5,18 @@ var elorderthanks = document.getElementById("orderthanks");
 
 //Object for submission button
 var buybutton = {
-  hidden: false,
+  clickCount: 0,
 
-  hide: function(onclick) {
-    if (!buybutton.hidden) {
-      elbuybutton.style.visibility = "hidden";
-      buybutton.hidden = false;
+  clickit: function() {
+    if (buybutton.clickCount == 0) {
+      // the current button is the Buy Now button, change it to logo
+      this.innerHTML = "<a href='index.html'><img src='images/logo.png' border-color='white' border-width='2px' height=50></a>";
+      elbuybutton.removeEventListener("click", buyer.thanks, false);
+      elbuybutton.removeEventListener("click", buybutton.clickit, false);
+    } else {
+      // the current button is the logo button, reload index
     }
-  },
-
-  show: function(onclick) {
-    if (buybutton.hidden) {
-      elbuybutton.style.visibility = "visible";
-      buybutton.hidden = true;
-      return buybutton.hidden;
-    }
+    buybutton.clickCount++;
   },
 }
 
@@ -29,11 +26,18 @@ var buyer = {
 
   //Displays thank you message to user
   thanks: function(onclick) {
-    buyer.name = elbuyer.value,
-    elorderthanks.textContent = "Thank you, " + buyer.name + " for your order!";
+    var sThanksMsg = "Thank you";
+
+    buyer.name = elbuyer.value;
+    if (buyer.name.length > 0 ) {
+      sThanksMsg = sThanksMsg + ", " + buyer.name;
+    }
+    sThanksMsg = sThanksMsg + " for your order!";
+
+    elorderthanks.textContent = sThanksMsg;
   },
 }
 
 //Set up individiual Event Listeners
 elbuybutton.addEventListener("click", buyer.thanks, false);
-elbuybutton.addEventListener("click", buybutton.hide, false);
+elbuybutton.addEventListener("click", buybutton.clickit, false);
