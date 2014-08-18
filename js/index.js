@@ -196,17 +196,13 @@ function addDragListenersToId(idListening) {
   }
 }
 
-//
 //  IIFE code to set up the page's event listeners
-//
-(function() {
-  addDragListenersToId("textBox");
-  addDragListenersToId("imgBox");
+addDragListenersToId("textBox");
+addDragListenersToId("imgBox");
 
-  //Set up individiual Event Listeners
-  eltextbox.addEventListener("keypress", input.userType, false);
-  elanalyze.addEventListener("click", input.runSubmit, false);
-  elanalyze.addEventListener("click", button.hide, false);
+//Set up individiual Event Listeners
+eltextbox.addEventListener("keypress", input.userType, false);
+elanalyze.addEventListener("click", input.runSubmit, false);
+elanalyze.addEventListener("click", button.hide, false);
 
-}());
 
