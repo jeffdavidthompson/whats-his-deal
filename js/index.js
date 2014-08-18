@@ -58,7 +58,6 @@ var listHisDealsEmpty = [
 //Object for submission button
 var button = {
   hidden: false,
-  pic: elanalyze.style.backgroundImage,
 
   hide: function() {
     if (!button.hidden) {
@@ -73,11 +72,6 @@ var button = {
       button.hidden = true;
       return button.hidden;
     }
-  },
-
-  changepic: function(onhover) {
-    alert(button.pic.url);
-    button.pic.url = "(../images/postclickButton.png)";
   },
 }
 
@@ -213,7 +207,6 @@ function addDragListenersToId(idListening) {
   eltextbox.addEventListener("keypress", input.userType, false);
   elanalyze.addEventListener("click", input.runSubmit, false);
   elanalyze.addEventListener("click", button.hide, false);
-  elanalyze.addEventListener("hover", button.changepic, false);
 
 }());
 
