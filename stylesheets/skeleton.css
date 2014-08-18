@@ -256,13 +256,6 @@ h1 {
   padding-bottom: 2%;
 }
 
-.inputBox {
-  margin-left: 25%;
-  margin-right: auto;
-  width: 50%;
-  height: 125px;
-}
-
 #imgBox {
   max-height: 125px;
   height: auto;
