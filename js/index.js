@@ -42,9 +42,9 @@ var listHisDeals = [
   "He forgot about Dre.",
   "He doesn't know he's beautiful.",
   "He thought of a perfect commit message but he already pushed his code.",
-  "He's a food truck chaser."
-  "He's not sure if you can both be vampires."
-  "He thinks your mom has got in goin' on."
+  "He's a food truck chaser.",
+  "He's not sure if you can both be vampires.",
+  "He thinks your mom has got in goin' on.",
   "Gurl, he thinks you his world."
 ];
 
@@ -55,7 +55,7 @@ var listHisDealsEmpty = [
   "Error: I didn't catch that. Try entering something.",
   "Error: If you need validation, you won't get it here. Try entering something.",
   "Error: This would work a lot better if you actually entered something.",
-  "Error: If you could enter something, that would be great."
+  "Error: If you could enter something, that would be great.",
   "Error: You entered nothing. I guess he's as speachless as you are."
 ];
 
