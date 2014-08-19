@@ -201,7 +201,8 @@ addDragListenersToId("textBox");
 addDragListenersToId("imgBox");
 
 //Set up individiual Event Listeners
-eltextbox.addEventListener("keypress", input.userType, false);
+eltextbox.addEventListener("input", input.userType, false);
+eltextbox.addEventListener("paste", input.userType, false);
 elanalyze.addEventListener("click", input.runSubmit, false);
 elanalyze.addEventListener("click", button.hide, false);
 
