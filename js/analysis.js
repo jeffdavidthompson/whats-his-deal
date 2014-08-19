@@ -1,10 +1,15 @@
 
 //	http://stackoverflow.com/questions/767759/occurrences-of-substring-in-a-string
 
-str = "hey gurl wutz up :)";
-findStr = ":)";
+//inputString = "hey gurl wutz up :)";
 
-alert(str.split(findStr, -1).length-1);
+countEmotes = function() {
+	var inputString = document.getElementById("textBox").value;
+	targetString = ":)";
+	alert(inputString.split(targetString, -1).length-1);
+}
+
+
 
 
 
